@@ -1,0 +1,183 @@
+/* palanquin-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2'); 
+}
+
+/* palanquin-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/palanquin-v17-latin-500.woff2') format('woff2'); 
+}
+
+/* palanquin-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/palanquin-v17-latin-600.woff2') format('woff2'); 
+}
+
+/* palanquin-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Palanquin';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/palanquin-v17-latin-700.woff2') format('woff2'); 
+}
+
+/* palanquin-dark-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Palanquin Dark';
+  font-style: normal; 
+}
+
+/* palanquin-dark-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Palanquin Dark';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/palanquin-dark-v17-latin-700.woff2') format('woff2'); 
+}
+
+
+/*==============================
+Root & Variables
+=========================*/
+
+:root {
+    --color-orange: rgb(231, 108, 31);
+}
+
+
+
+
+
+
+/*==============================
+Root & Variables
+=========================*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--color-orange);
+    max-width: 100%;
+
+    height: 128px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.nav-bar {
+    padding: 0px 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-bar__menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-bar__menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.landing-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero_image {
+    height: 508px;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.hero_logo_overlay {
+display: flex;
+justify-content: center;
+margin-top: -100px;
+
+}
+
+.hero_restaurant-logo {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: 13px solid rgb(253, 234, 220);
+
+
+
+
+
+}
+
+.hero {
+    position: relative;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.restaurant-info_name {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 26px 0;
+}
+.restaurant-info {
+    display: flex;
+    flex-direction: column;
+
+}
+.restaurant-info_rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background-color: rgb(250, 202, 172);
+    border-radius: 4px;
+    padding: 4px 5px;
+}
+.rating-value {
+    font-family: 'Palanquin';
+}
+
+.rating-count {
+font-family: 'Palanquin';
+
+}
