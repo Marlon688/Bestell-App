@@ -1,9 +1,9 @@
 function createDishTemplate(dish) {
     return `
-        < div class="menu-item" >
+        <div class="menu-item">
          <img class="menu-item_image" src="${dish.image}" alt="${dish.name}" />
 
-           <div class="menu-item-info">
+           <div class="menu-item_info">
         <div class="menu-item_header">
             <h3 class="menu-item_name">${dish.name}</h3>
             <span class="menu-item_price">${dish.price.toFixed(2)}€</span>
@@ -15,7 +15,7 @@ function createDishTemplate(dish) {
         </button>
 
 
-    </div>
+                </div>
     </div>
 
 

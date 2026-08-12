@@ -1,235 +1,298 @@
 /* palanquin-regular - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Palanquin';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/palanquin-v17-latin-regular.woff2") format("woff2");
 }
 
 /* palanquin-500 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Palanquin';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./assets/fonts/palanquin-v17-latin-500.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/palanquin-v17-latin-500.woff2") format("woff2");
 }
 
 /* palanquin-600 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Palanquin';
-    font-style: normal;
-    font-weight: 600;
-    src: url('./assets/fonts/palanquin-v17-latin-600.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/palanquin-v17-latin-600.woff2") format("woff2");
 }
 
 /* palanquin-700 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Palanquin';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/fonts/palanquin-v17-latin-700.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/palanquin-v17-latin-700.woff2") format("woff2");
 }
 
 /* palanquin-dark-regular - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Palanquin Dark';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Palanquin Dark";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/palanquin-dark-v17-latin-regular.woff2")
+    format("woff2");
 }
 
 /* palanquin-dark-700 - latin */
 @font-face {
-    font-display: swap;
-    font-family: 'Palanquin Dark';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/fonts/palanquin-dark-v17-latin-700.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Palanquin Dark";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/palanquin-dark-v17-latin-700.woff2") format("woff2");
 }
-
 
 /*==============================
 Root & Variables
 =========================*/
 
 :root {
-    --color-orange: rgb(231, 108, 31);
-    --color-dark: rgb(62, 61, 60);
-    --font-primary: 'Palanquin';
-    --font-dark: 'Palanquin Dark';
+  --color-orange: rgb(231, 108, 31);
+  --color-dark: rgb(54, 53, 52);
+  --font-primary: "Palanquin";
+  --font-dark: "Palanquin Dark";
 }
-
-
-
-
-
 
 /*==============================
 Root & Variables
 =========================*/
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-    background-color: var(--color-orange);
-    max-width: 100%;
+  background-color: var(--color-orange);
+  max-width: 100%;
 
-    height: 128px;
-    display: flex;
-    align-items: center;
-
-
+  height: 128px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-bar {
-    padding: 0px 120px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  padding: 0px 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-bar__menu-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    cursor: pointer;
-    padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  cursor: pointer;
+  padding: 4px;
 }
 
 .nav-bar__menu-btn span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 2px;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
 }
 
 .landing-section {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero_image {
-    height: 508px;
-    display: block;
-    object-fit: cover;
-    width: 100%;
+  height: 508px;
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .hero_logo_overlay {
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;
-
+  display: flex;
+  justify-content: center;
+  margin-top: -100px;
 }
 
 .hero_restaurant-logo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 13px solid rgb(253, 234, 220);
-
-
-
-
-
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 13px solid rgb(253, 234, 220);
 }
 
 .hero {
-    position: relative;
+  position: relative;
 }
 
 .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .restaurant-info_name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 26px 0;
 }
 
 .restaurant-info {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
 }
 
 .name-orange {
-    font-family: var(--font-dark);
-    color: var(--color-orange);
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 120%;
+  font-family: var(--font-dark);
+  color: var(--color-orange);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
 }
 
 h1 {
-    font-family: var(--font-dark);
-    color: var(--color-dark);
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 120%;
+  font-family: var(--font-dark);
+  color: var(--color-dark);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
 }
-
-
-
 
 .restaurant-info_rating {
-    width: 110px;
-    height: 32px;
-    opacity: 1;
-    gap: 8px;
-    background-color: rgb(250, 202, 172);
-    border-radius: 4px;
-    padding: 4px 5px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 110px;
+  height: 32px;
+  opacity: 1;
+  gap: 8px;
+  background-color: rgb(250, 202, 172);
+  border-radius: 4px;
+  padding: 4px 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.restaurant-info_rating img{
-    width: 24px;
-    height: 23px;
-    border-radius: 0.5px;
+.restaurant-info_rating img {
+  width: 24px;
+  height: 23px;
+  border-radius: 0.5px;
 }
 
 .rating-value {
-    font-family: var(--font-dark);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
+  font-family: var(--font-dark);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
 }
 
 .rating-count {
-    font-family: var(--font-primary);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 120%;
-
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
 }
 .restaurant-info_description {
-font-family: var(--font-primary);
-font-weight: 700 ;
-font-size: 24px;
-line-height: 120%;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
+.category-header {
+  background-color: var(--color-orange);
+  width: 100%;
+  height: 60px;
+  padding: 0 24px;
+  margin: 80px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+.category-header h2 {
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 40px;
+  font-weight: 700;
+  padding-left: 280px;
+}
+
+.menu-item {
+  display: flex;
+  gap: 20px;
+  padding-left: 16px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background-color: rgb(253, 234, 220);
+}
+
+.menu-item_image {
+  width: 207px;
+  height: 121px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.menu-item_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.menu-item_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item_name {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.menu-item_price {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.menu-item_description {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.menu-item_btn {
+  font-family: var(--font-primary);
+  color: var(--color-orange);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  background-color: white;
+  border-radius: 20px;
+  align-self: flex-end;
+  margin-top: auto;
 }

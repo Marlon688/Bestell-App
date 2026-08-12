@@ -1,84 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestellseite</title>
 
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <link rel="stylesheet" href="./styles/standard.css">
-    <link rel="stylesheet" href="./styles/assets.css">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
+  <body>
     <div class="landing-section">
-        <div class="header">
-            <div class="nav-bar">
-                <div class="nav-bar_logo">
-                    <img src="./assets/img/Logo 01.png" alt="Logo">
-                </div>
-                <button class="nav-bar__menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-            </div>
-
+      <div class="header">
+        <div class="nav-bar">
+          <div class="nav-bar_logo">
+            <img src="./assets/img/Logo 01.png" alt="Logo" />
+          </div>
+          <button class="nav-bar__menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+      </div>
 
-        <section class="hero">
-            <img class="hero_image" src="./assets/img/hero.png" alt="Restaurant Picture">
-            <div class="hero_logo_overlay">
-                <img class="hero_restaurant-logo" src="./assets/img/logo-burger.png" alt="Restaurant Logo">
+      <section class="hero">
+        <img
+          class="hero_image"
+          src="./assets/img/hero.png"
+          alt="Restaurant Picture"
+        />
+        <div class="hero_logo_overlay">
+          <img
+            class="hero_restaurant-logo"
+            src="./assets/img/logo-burger.png"
+            alt="Restaurant Logo"
+          />
+        </div>
+      </section>
+
+      <main class="main-content">
+        <section class="restaurant-info">
+          <div class="restaurant-info_name">
+            <h1><span class="name-orange">Burger</span>House</h1>
+            <div class="restaurant-info_rating">
+              <img
+                src="./assets/icons/star.svg"
+                alt="Star"
+                width="24px"
+                height="23"
+              />
+              <span class="rating-value">4,1</span>
+              <span class="rating-count">(317)</span>
             </div>
+          </div>
+          <p class="restaurant-info_description">
+            The best of Burgers, Pizza, and Greens, all in one great place.
+          </p>
         </section>
 
-        <main class="main-content">
-            <section class="restaurant-info">
-                <div class="restaurant-info_name">
-                    <h1><span class="name-orange">Burger</span>House</h1>
-                    <div class="restaurant-info_rating">
-                        <img src="./assets/icons/star.svg" alt="Star" width="24px" height="23" />
-                        <span class="rating-value">4,1</span>
-                        <span class="rating-count">(317)</span>
-                    </div>
-                </div>
-                <p class="restaurant-info_description">
-                    The best of Burgers, Pizza, and Greens, all in one great place.
-                </p>
-            </section>
+        <div class="category-header" id="burger">
+          <h2>Burger & Sandwiches</h2>
+        </div>
+        <div class="menu-items" id="burger-items"></div>
 
-            <div class="category-header" id="burger">
-                <h2>Burger & Sandwiches</h2>
-            </div>
-            <div class="menu-items" id="burger-items"></div>
+        <div class="category-header" id="pizza">
+          <h2>Pizza <span class="category-header_sub">(30cm)</span></h2>
+        </div>
+        <div class="menu-items" id="pizza-items"></div>
 
-            <div class="category-header" id="pizza">
-            <h2>Pizza (30cm)</h2>
+        <div class="category-header" id="salad">
+          <h2>Salad</h2>
+        </div>
+        <div class="menu-items" id="salad-items"></div>
+      </main>
+
+      <script src="./scripts/db.js"></script>
+      <script src="./scripts/template.js"></script>
+      <script src="./script.js"></script>
     </div>
-    <div class="menu-items" id="pizza-items"></div>
-
-    <div class="category-header" id="salad">
-        <h2>Salad</h2>
-    </div>
-    <div class="menu-items" id="salad-items"></div>
-    </main>
-
-
-  
-
-
-
-   
-
-</body>
-
+  </body>
 </html>
