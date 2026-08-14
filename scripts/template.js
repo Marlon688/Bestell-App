@@ -1,5 +1,5 @@
 function createDishTemplate(dish) {
-    return `
+  return `
         <div class="menu-item">
          <img class="menu-item_image" src="${dish.image}" alt="${dish.name}" />
 
@@ -15,12 +15,9 @@ function createDishTemplate(dish) {
         </button>
 
 
-                </div>
-    </div>
+  </div>
+    </div>  
 
 
     `;
-
-
-
 }

@@ -61,20 +61,51 @@
           </p>
         </section>
 
-        <div class="category-header" id="burger">
-          <h2>Burger & Sandwiches</h2>
-        </div>
-        <div class="menu-items" id="burger-items"></div>
+        <div class="page-wrapper">
+          <div class="category-header" id="burger">
+            <img
+              src="./assets/icons/burger-icon.png"
+              alt="Burger"
+              class="category-header_icon"
+            />
+            <h2>Burger &amp; Sandwiches</h2>
+          </div>
+          <div class="menu-items" id="burger-items"></div>
 
-        <div class="category-header" id="pizza">
-          <h2>Pizza <span class="category-header_sub">(30cm)</span></h2>
-        </div>
-        <div class="menu-items" id="pizza-items"></div>
+          <div class="category-header" id="pizza">
+            <img
+              src="./assets/icons/pizza-icon.png"
+              alt="Pizza"
+              class="category-header_icon"
+            />
+            <h2>Pizza <span class="category-header_sub">(30cm)</span></h2>
+          </div>
+          <div class="menu-items" id="pizza-items"></div>
 
-        <div class="category-header" id="salad">
-          <h2>Salad</h2>
+          <div class="category-header" id="salad">
+            <img
+              src="./assets/icons/salad-icon.png"
+              alt="Salad"
+              class="category-header_icon"
+            />
+            <h2>Salad</h2>
+          </div>
+          <div class="menu-items" id="salad-items"></div>
+
+          <aside class="cart">
+            <h2 class="cart_title">Your basket</h2>
+            <div class="cart_items" id="cart_items"></div>
+            <div class="cart_summary" id="cart_summary"></div>
+          </aside>
         </div>
-        <div class="menu-items" id="salad-items"></div>
+
+        <div class="confirmation d-none" id="confirmation">
+          <img src="./assets/icons/order.png" alt="" />
+          <p>order confirmed!<br />Your food is on the way!</p>
+          <button class="confirmation-close" onclick="closeConfirmation()">
+            x
+          </button>
+        </div>
       </main>
 
       <script src="./scripts/db.js"></script>
