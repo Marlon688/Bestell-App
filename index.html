@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -16,7 +17,7 @@
       <div class="header">
         <div class="nav-bar">
           <div class="nav-bar_logo">
-            <img src="./assets/img/Logo 01.png" alt="Logo" />
+            <img src="./assets/img/Logo-01.png" alt="Logo" />
           </div>
           <button class="nav-bar__menu-btn">
             <span></span>
@@ -49,7 +50,7 @@
               <img
                 src="./assets/icons/star.svg"
                 alt="Star"
-                width="24px"
+                width="24"
                 height="23"
               />
               <span class="rating-value">4,1</span>
@@ -101,7 +102,10 @@
 
         <div class="confirmation d-none" id="confirmation">
           <img src="./assets/icons/order.png" alt="" />
-          <p>order confirmed!<br />Your food is on the way!</p>
+          <div class="confirmation_text">
+            <p class="confirmation_title">Order confirmed!</p>
+            <p class="confirmation_message">Your food is on the way!</p>
+          </div>
           <button class="confirmation-close" onclick="closeConfirmation()">
             x
           </button>
