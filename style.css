@@ -85,7 +85,27 @@ Root & Variables
     120px
     [cart-start] 435px [cart-end]
     1fr [full-end];
+  grid-template-rows: repeat(6, auto);
   align-content: start;
+}
+
+#burger {
+  grid-row: 1;
+}
+#burger-items {
+  grid-row: 2;
+}
+#pizza {
+  grid-row: 3;
+}
+#pizza-items {
+  grid-row: 4;
+}
+#salad {
+  grid-row: 5;
+}
+#salad-items {
+  grid-row: 6;
 }
 
 .restaurant-info_name {
@@ -177,7 +197,7 @@ h1 {
 
 .menu-items {
   grid-column: content-start / content-end;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .menu-item {
   display: flex;
