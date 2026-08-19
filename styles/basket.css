@@ -84,3 +84,59 @@
   color: white;
   font-size: 20px;
 }
+
+.basket-item {
+  position: relative;
+  background-color: var(--color-cream);
+  border-radius: 20px;
+  padding: 16px;
+  color: var(--color-dark);
+}
+.basket-item_delete {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.basket-item_name {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.basket-item_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.basket-item_stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.basket-item_price {
+  display: flex;
+  justify-content: end;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.basket-item_stepper img {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.basket-item_stepper button {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.basket-item_delete img {
+  height: 18px;
+  width: 16px;
+}

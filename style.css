@@ -5,6 +5,7 @@ Root & Variables
 :root {
   --color-orange: rgb(231, 108, 31);
   --color-dark: rgb(54, 53, 52);
+  --color-cream: rgb(253, 234, 220);
   --font-primary: "Palanquin";
   --font-dark: "Palanquin Dark";
 }
@@ -66,7 +67,7 @@ Root & Variables
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 13px solid rgb(253, 234, 220);
+  border: 13px solid var(--color-cream);
 }
 
 .hero {
@@ -205,7 +206,7 @@ h1 {
   padding: 16px;
   border-radius: 12px;
   margin: 15px;
-  background-color: rgb(253, 234, 220);
+  background-color: var(--color-cream);
 }
 
 .menu-item_image {
@@ -250,7 +251,7 @@ h1 {
 }
 
 .menu-item_btn {
-  color: var(--color-orange);
+  color: var(--color-dark);
   font-size: 16px;
   font-weight: 600;
   line-height: 120%;
@@ -260,4 +261,8 @@ h1 {
   margin-top: auto;
   border: 1x solid var(--color-orange);
   padding: 4px 12px;
+}
+
+.menu-item_btn--added {
+  color: var(--color-orange);
 }
