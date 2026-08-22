@@ -1,4 +1,9 @@
+// ============================
+// State & Config
+// ============================
+
 let basket = [];
+let hasOrdered = false;
 const DELIVERY_FEE = 4.99;
 
 function formatPrice(value) {
@@ -10,7 +15,12 @@ function getAmount(id) {
   return entry ? entry.amount : 0;
 }
 
+// ============================
+// Basket Logic
+// ============================
+
 function addToBasket(id) {
+  hasOrdered = false;
   const entry = basket.find((item) => item.id === id);
   if (entry) entry.amount++;
   else basket.push({ id: id, amount: 1 });
@@ -37,6 +47,10 @@ function calculateSubtotal() {
   return sum;
 }
 
+// ============================
+// Rendering
+// ============================
+
 function renderDishes() {
   const htmlByCategory = {};
 
@@ -51,22 +65,56 @@ function renderDishes() {
 }
 
 function renderBasket() {
-  const itemContainer = document.getElementById("cart_items");
-  const summaryContainer = document.getElementById("cart_summary");
+  const cart = document.querySelector(".cart");
+  cart.classList.toggle("d-none", hasOrdered);
+  if (basket.length === 0) return renderEmptybasket();
+  renderBasketItems();
+  renderBasketSummary();
+}
 
+function renderEmptybasket() {
+  document.getElementById("cart_items").innerHTML = getEmptyBasketTemplate();
+  document.getElementById("cart_summary").innerHTML = "";
+}
+
+function renderBasketItems() {
   let html = "";
   for (let entry of basket) {
     const dish = myDishes.find((item) => item.id === entry.id);
     html += getBasketItemTemplate(dish, entry.amount);
   }
-  itemContainer.innerHTML = html;
+  document.getElementById("cart_items").innerHTML = html;
+}
 
+function renderBasketSummary() {
   const subtotal = calculateSubtotal();
-  summaryContainer.innerHTML = getBasketSummaryTemplate(
+  document.getElementById("cart_summary").innerHTML = getBasketSummaryTemplate(
     subtotal,
     DELIVERY_FEE,
     subtotal + DELIVERY_FEE,
   );
+}
+
+// ============================
+// Checkout
+// ============================
+
+function buyNow() {
+  basket = [];
+  hasOrdered = true;
+  render();
+  showconfirmation();
+}
+
+function showconfirmation() {
+  document.getElementById("overlay").classList.remove("d-none");
+  document.getElementById("confirmation").classList.remove("d-none");
+  setTimeout(closeConfirmation, 2500);
+}
+
+function closeConfirmation() {
+  document.getElementById("overlay").classList.add("d-none");
+  document.getElementById("confirmation").classList.add("d-none");
 }
 
 function render() {

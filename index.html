@@ -18,108 +18,122 @@
   </head>
 
   <body>
-    <div class="landing-section">
-      <div class="header">
-        <div class="nav-bar">
-          <div class="nav-bar_logo">
-            <img src="./assets/img/Logo-01.png" alt="Logo" />
-          </div>
-          <button class="nav-bar__menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
+    <!-- ===== Header ===== -->
 
-      <section class="hero">
-        <img
-          class="hero_image"
-          src="./assets/img/hero.png"
-          alt="Restaurant Picture"
-        />
-        <div class="hero_logo_overlay">
-          <img
-            class="hero_restaurant-logo"
-            src="./assets/img/logo-burger.png"
-            alt="Restaurant Logo"
-          />
+    <div class="header">
+      <div class="nav-bar">
+        <div class="nav-bar_logo">
+          <img src="./assets/img/Logo-01.png" alt="Logo" />
         </div>
+        <button class="nav-bar__menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+
+    <section class="hero">
+      <img
+        class="hero_image"
+        src="./assets/img/hero.png"
+        alt="Restaurant Picture"
+      />
+      <div class="hero_logo_overlay">
+        <img
+          class="hero_restaurant-logo"
+          src="./assets/img/logo-burger.png"
+          alt="Restaurant Logo"
+        />
+      </div>
+    </section>
+
+    <!-- ===== Menu & Cart ===== -->
+
+    <main class="main-content">
+      <section class="restaurant-info">
+        <div class="restaurant-info_name">
+          <h1><span class="name-orange">Burger</span>House</h1>
+          <div class="restaurant-info_rating">
+            <img src="./assets/icons/star.svg" alt="" width="24" height="23" />
+            <span class="rating-value">4,1</span>
+            <span class="rating-count">(317)</span>
+          </div>
+        </div>
+        <p class="restaurant-info_description">
+          The best of Burgers, Pizza, and Greens, all in one great place.
+        </p>
       </section>
 
-      <main class="main-content">
-        <section class="restaurant-info">
-          <div class="restaurant-info_name">
-            <h1><span class="name-orange">Burger</span>House</h1>
-            <div class="restaurant-info_rating">
-              <img
-                src="./assets/icons/star.svg"
-                alt="Star"
-                width="24"
-                height="23"
-              />
-              <span class="rating-value">4,1</span>
-              <span class="rating-count">(317)</span>
-            </div>
-          </div>
-          <p class="restaurant-info_description">
-            The best of Burgers, Pizza, and Greens, all in one great place.
-          </p>
-        </section>
-
-        <div class="page-wrapper">
-          <div class="category-header" id="burger">
-            <img
-              src="./assets/icons/burger-icon.png"
-              alt="Burger"
-              class="category-header_icon"
-            />
-            <h2>Burger &amp; Sandwiches</h2>
-          </div>
-          <div class="menu-items" id="burger-items"></div>
-
-          <div class="category-header" id="pizza">
-            <img
-              src="./assets/icons/pizza-icon.png"
-              alt="Pizza"
-              class="category-header_icon"
-            />
-            <h2>Pizza <span class="category-header_sub">(30cm)</span></h2>
-          </div>
-          <div class="menu-items" id="pizza-items"></div>
-
-          <div class="category-header" id="salad">
-            <img
-              src="./assets/icons/salad-icon.png"
-              alt="Salad"
-              class="category-header_icon"
-            />
-            <h2>Salad</h2>
-          </div>
-          <div class="menu-items" id="salad-items"></div>
-
-          <aside class="cart">
-            <h2 class="cart_title">Your Basket</h2>
-            <div class="cart_items" id="cart_items"></div>
-            <div class="cart_summary" id="cart_summary"></div>
-          </aside>
+      <div class="page-wrapper">
+        <div class="category-header" id="burger">
+          <img
+            src="./assets/icons/burger-icon.png"
+            alt="Burger"
+            class="category-header_icon"
+          />
+          <h2>Burger &amp; Sandwiches</h2>
         </div>
+        <div class="menu-items" id="burger-items"></div>
 
-        <div class="confirmation d-none" id="confirmation">
-          <img src="./assets/icons/order.png" alt="" />
-          <div class="confirmation_text">
-            <p class="confirmation_title">Order confirmed!</p>
-            <p class="confirmation_message">Your food is on the way!</p>
-          </div>
-          <button class="confirmation-close" onclick="closeConfirmation()">
-            x
-          </button>
+        <div class="category-header" id="pizza">
+          <img
+            src="./assets/icons/pizza-icon.png"
+            alt="Pizza"
+            class="category-header_icon"
+          />
+          <h2>Pizza <span class="category-header_sub">(30cm)</span></h2>
         </div>
-      </main>
+        <div class="menu-items" id="pizza-items"></div>
 
-      <script src="./scripts/db.js"></script>
-      <script src="./scripts/template.js"></script>
-      <script src="./script.js"></script>
-    </div>
+        <div class="category-header" id="salad">
+          <img
+            src="./assets/icons/salad-icon.png"
+            alt="Salad"
+            class="category-header_icon"
+          />
+          <h2>Salad</h2>
+        </div>
+        <div class="menu-items" id="salad-items"></div>
+
+        <aside class="cart">
+          <h2 class="cart_title">Your Basket</h2>
+          <div class="cart_items" id="cart_items"></div>
+          <div class="cart_summary" id="cart_summary"></div>
+        </aside>
+      </div>
+
+      <div class="overlay d-none" id="overlay"></div>
+
+      <!-- ===== Confirmation ===== -->
+
+      <div class="confirmation d-none" id="confirmation">
+        <img src="./assets/icons/order.png" alt="" />
+        <div class="confirmation_text">
+          <p class="confirmation_title">Order confirmed!</p>
+          <p class="confirmation_message">Your food is on the way!</p>
+        </div>
+        <button class="confirmation-close" onclick="closeConfirmation()">
+          x
+        </button>
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+
+    <footer class="footer">
+      <div class="footer_copyright">
+        <img src="./assets/icons/copyright.png" alt="" />
+        <span> 2025 BurgerHouse</span>
+      </div>
+      <a href="#">Imprint</a>
+      <a href="#">Cookie Preferences</a>
+    </footer>
+
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

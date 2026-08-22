@@ -1,3 +1,7 @@
+/*==============================
+Cart Container
+=========================*/
+
 .cart {
   grid-column: cart-start / cart-end;
   grid-row: 1 / -1;
@@ -15,74 +19,38 @@
   margin-top: 80px;
 
   max-height: calc(100vh - 40px);
-  overflow: auto;
 }
 
 .cart_title {
   font-size: 32px;
   font-weight: 700;
   color: white;
+  text-align: center;
 }
+
+/*==============================
+Cart Items
+=========================*/
 
 .cart_items {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.cart_items::-webkit-scrollbar {
+  width: 6px;
 }
 
-.cart_summary {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: auto;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+.cart_items::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.confirmation {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: var(--color-dark);
-  color: white;
-  border-radius: 20px;
-  padding: 30px 40px;
-}
-
-.confirmation img {
-  width: 80px;
-  height: 57px;
-  transform: rotate(180deg);
-}
-
-.confirmation_text {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-primary);
-}
-
-.confirmation_title {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 120%;
-}
-.confirmation_message {
-  font-size: 29px;
-  font-weight: 700;
-  line-height: 120%;
-}
-.confirmation-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 20px;
+.cart_items::-webkit-scrollbar-thumb {
+  background-color: rgb(230, 195, 173);
+  border-radius: 30px;
 }
 
 .basket-item {
@@ -91,17 +59,18 @@
   border-radius: 20px;
   padding: 16px;
   color: var(--color-dark);
+  line-height: 160%;
 }
 .basket-item_delete {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 25px;
+  right: 20px;
 }
 
 .basket-item_name {
   font-size: 22px;
   font-weight: 700;
-  line-height: 120%;
+  padding: 10px 20px 0 0;
 }
 
 .basket-item_footer {
@@ -115,6 +84,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .basket-item_price {
@@ -122,21 +93,124 @@
   justify-content: end;
   font-size: 22px;
   font-weight: 700;
-  line-height: 120%;
-}
-
-.basket-item_stepper img {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 120%;
 }
 
 .basket-item_stepper button {
   font-size: 24px;
   font-weight: 600;
-  line-height: 120%;
 }
 .basket-item_delete img {
   height: 18px;
   width: 16px;
+}
+/*==============================
+Summary & Buy
+=========================*/
+
+.cart_summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.summary-row--total {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  border-top: 2px solid rgb(255, 255, 255);
+}
+
+.buy-btn {
+  background-color: var(--color-orange);
+  border-radius: 60px;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 6px 55px;
+  margin-top: 20px;
+}
+
+/*==============================
+Confirmation & Overlay
+=========================*/
+
+.confirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  width: 415px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(54, 53, 52);
+  color: var(--color-cream);
+  border-radius: 20px;
+  padding: 32px 40px;
+}
+
+.confirmation img {
+  width: 80px;
+  height: 80px;
+  transform: scaleX(-1);
+}
+
+.confirmation_text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-primary);
+  gap: 20px;
+}
+
+.confirmation_title {
+  font-size: 42px;
+  font-weight: 700;
+}
+.confirmation_message {
+  font-size: 29px;
+  font-weight: 700;
+}
+.confirmation-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 20px;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(54, 53, 52, 0.4);
+  z-index: 99;
+}
+
+/*==============================
+Empty basket
+=========================*/
+
+.basket-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.basket-empty img {
+  width: 120px;
+  height: 120px;
 }
